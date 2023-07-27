@@ -1,0 +1,69 @@
+.article {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+
+    > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        padding: 0 12px;
+        max-height: 40px;
+        font-family: 'Outfit', sans-serif;
+        height: 40px;
+        // width: 40px;
+        background-color: var(--articleCountEllipseBg);
+        color: var(--articleCountEllipseColor);
+    }
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h3 {
+            cursor: pointer;
+            color: var(--articleTitle);
+            font-size: 1.15rem;
+            line-height: 1.44;
+            font-weight: 400;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+                position: relative;
+                font-size: 1rem;
+                color: var(--articleDescItems);
+                font-weight: 400;
+
+                a {
+                    color: var(--articleDescItems);
+                }
+
+                &:not(:first-of-type) {
+                    padding-left: 10px;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        height: 2px;
+                        background-color: var(--articleDescItems);
+                        width: 2px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

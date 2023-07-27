@@ -1,0 +1,48 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 675px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pagination {
+    width: 100%;
+    max-width: fit-content;
+    margin: 0 auto;
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+        display: flex;
+        height: 45px;
+        width: 45px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        border: 1px solid var(--articlePaginationBorder);
+        color: var(--articlePagination);
+        font-size: 1.2rem;
+        background-color: var(--headerBackground);
+        transition: color .2s ease, border .2s ease, background-color .2s ease;
+        font-weight: 300;
+
+        &:not([disabled]) {
+            &:hover {
+                background-color: var(--articlePagination);
+                color: #fff;
+            }
+        }
+        
+        &[disabled] {
+            pointer-events: none;
+            border: 1px solid var(--headerBorderColor);
+            color: var(--articleDisabledPagination);
+        }
+    }
+}
