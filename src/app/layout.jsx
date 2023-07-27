@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
 								: <Image
 									src={currentTheme === 'dark' ? '/logoFormiga.svg' : '/logoFormiga.svg'}
 									width={50}
-									height={25}
+									height={75}
 									priority
 									alt="Logotipo do AntHub"
 								/>
